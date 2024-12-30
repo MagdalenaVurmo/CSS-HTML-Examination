@@ -1,0 +1,785 @@
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: white;
+width: 100vw;
+
+} 
+
+.page {
+    background-color: rgb(228, 248, 242);
+    margin: auto;
+    max-width: 900px;
+}
+
+header{
+box-shadow: 0px 1px 6px 0px #8f8e8e;
+}
+
+.hamburger { 
+    right: 0;
+    padding: .6rem .6rem .3rem .6rem;
+    position: fixed;
+    z-index: 1;
+    @media only screen and (min-width: 600px) {
+        display: none;
+    }
+}
+
+h1 {
+    color: rgba(10, 132, 110, 1);
+    align-self: center;
+    font:normal 24px Open Sans;
+    margin-top: 2rem;
+    @media only screen and (min-width: 600px){
+        font-size: 48px;
+    }
+}
+
+h2 {
+    padding-top: 30%;
+    color: white;
+    padding-bottom: 10%;
+    text-align: center;
+    font: bold 24px Open Sans;
+    @media only screen and (min-width: 600px){
+        padding-top: 50%;
+        font-size: 32px;    
+    }
+}
+
+h3 {
+    color: #070707;
+    font: bold 20px/28.2px Maven Pro;
+    margin: .5rem auto 0;
+    padding: .5rem;
+    @media only screen and (min-width: 600px){
+        text-align: center;
+        font-size: 32px;
+        margin: 0;
+        padding:1rem 0;
+    }
+}
+
+h4 {
+    font: bold 16px Maven Pro;
+    @media only screen and (min-width: 600px) {
+        font-size: 24px;
+    }
+}
+
+h5 {
+    color: #070707;
+    font: bold 12px Maven Pro;
+    @media only screen and (min-width: 600px) {
+        font-size: 16px;
+    }
+}
+
+p {
+    text-align: center;
+    font: normal 16px/28.2px Maven Pro;
+    color: #070707;
+    @media only screen and (min-width: 600px){
+        text-align: justify;
+    }
+}
+/*Här är min grid */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 195px);
+    grid-template-areas: "a a a a a a a a a a a a" 
+    "a a a a a a a a a a a a" 
+    "b b b b b b c c c c c c";
+    @media only screen and (min-width: 600px){
+        grid-template-rows: repeat(4, 125px);
+        grid-template-areas: "a a a a a a b b b b b b" 
+        "a a a a a a b b b b b b"
+        "a a a a a a c c c c c c" 
+        "a a a a a a c c c c c c";
+    }
+}
+
+
+.galleri__item0 { /*Här är fotot hand */
+    background-image: url("assets/images/hand.jpeg");
+    background-size:  cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    grid-area: a;
+}
+
+.galleri__item1 { /*Här är fotot Logo */
+    background-color: rgba(158, 109, 82, 1);
+    grid-area: b;
+    position: relative;
+}
+.galleri__item2 { /*Här är fotot plant */
+    background: rgba(10, 132, 110, 1);
+    grid-area: c;
+    position: relative;
+}
+
+
+/* Här börjar min navbar! */
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background-color: rgba(248, 241, 241, 0.897);
+    padding: 15px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar li{
+    display: none;
+    background-color: rga(242, 253, 255);
+@media only screen and (min-width: 600px){
+    display: flex;
+}
+}
+
+.navbar {  
+    
+    font-family: Georgia, Times, serif;
+    font-size: 20px;
+    letter-spacing: .1em;
+    a {
+font: bold 20px Open Sans;
+text-decoration: none;
+text-align: center;
+flex: 0 0 100%;
+color: rgba(10,132,110,1)
+    }
+}
+
+.navbar a {
+    color: rgba(52, 128, 141, 0.904);
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+
+}
+
+
+.navbar a:hover {
+    background-color: rgb(32, 114, 146);
+}
+
+
+.section {   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5em;
+    flex-shrink: 1;
+    grid-row: span 14;
+}
+
+.container1 { 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+@media only screen and (min-width: 600px){
+    flex-direction: row-reverse;
+    padding: 2rem;
+}
+}
+
+.container101 {
+    height: 240px;
+    width: 240px;
+    border: none;
+background-color: rgba(10, 132, 110, 1);
+border-radius: 240px;
+position: relative;
+margin: 1rem 0;
+@media only screen and (min-width:600px) {
+    width: 350px;
+    margin: 0 .5rem;
+    height: 350px;
+    
+    }
+    img {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 65%;
+    cursor: pointer;
+    text-align: center;
+    transform: translate(-50%, 50%);
+    }
+}
+.column1 {  
+align-self: center;
+flex-direction: column;
+display: flex;
+@media only screen and (min-width:600px) {
+    flex: 0 0 55%;
+    align-items: baseline;
+    padding: 0 2rem;
+}
+}
+
+.column1 img { /*Detta är fotot precis under menyn.*/
+    height: 100%;
+    width: 100%;
+    padding: 5%;  
+}
+
+.CentreraKnapp{
+    text-align: center;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid  rgb(13, 112, 129);
+    width: 190px;
+    margin: 1rem auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Våra planerade planteringar*/
+.ikon1--kort0{
+    top: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ikon1--mitten-höger{
+    transform: none;
+    width: 20px;
+    height: 20px;
+
+}
+
+.Otips_planta0 {
+width: 230px;
+height: 230px;
+margin: 1rem;
+border: none;
+position: relative;
+border-radius: 240px;
+background-color:  rgba(10, 132, 110, 1);
+@media only screen and (min-width: 600px){
+    width: 345px;
+    margin: 0.5rem;
+    height: 345px;
+    
+}
+}
+
+/*.envaxt {  Grid för plant-kort
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px repeat(3, 350px) 100px;
+    grid-template-areas: "i i i i i i i i i i i i" 
+        "a a a a a a d d d d d d"
+        "b b b b b b e e e e e e"
+        "c c c c c c f f f f f f"
+        ". . . . k k k k k . . .";
+    gap: 10px;
+    @media only screen and (min-width: 600px){
+        grid-template-rows: 50px repeat(2, 407px) 100px;
+        grid-template-areas:  
+        "a a a a d d d d f f f f"
+        "b b b b e e e e c c c c";
+    }
+}*/
+
+/*.envaxt{ FUNGERAR EJ VARFÖR!!!! 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "a a a a a b b b b b c c c c c"
+    "d d d d d e e e e e f f f f f";
+    column-gap: 2rem;
+    row-gap: 4rem;
+    margin-bottom: 3rem;
+}*/
+
+.envaxt{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "a b c"
+    "d e f";
+@media only screen and (min-width: 600px){
+      
+    }
+}
+
+
+  .ettkort--bild0 {  
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: end;
+    background-color: rgb(242, 253, 253);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 7px #424040;
+    border: solid #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    @media only screen and (min-width: 600px){
+        
+    }
+} 
+
+.ikon1 { 
+    display:grid;
+    box-shadow: 0 3px 6px #383838;
+    position: relative;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: end;
+    background-color: rgb(197, 211, 211);
+    background-repeat: no-repeat;
+
+}
+
+.vanligtkort{
+    height: 60px;
+    width: 100%;
+    bottom: 1px;
+    position:relative;
+    background-color: white;
+    }
+
+
+.ikon1--kort0{ /*IKONERNA till bilderna */
+    background-image: url("assets/images/gurka.avif");
+    grid-area: a;
+}
+
+.ikon1--kort1{ /*IKONERNA till bilderna */
+background-image:url("assets/images/tomater.avif");
+grid-area: b;
+}
+
+
+.ikon1--kort2{  /*IKONERNA till bilderna */
+background-image: url("assets/images/tomat.avif");
+grid-area: c;
+}
+
+.ikon1--kort3{ /*IKONERNA till bilderna */
+background-image: url("assets/images/ärta.avif");
+grid-area: d;
+
+}
+
+.ikon1--kort4{ /*IKONERNA till bilderna */
+background-image: url("assets/images/lilagrönsak.avif");
+grid-area: e;
+}
+
+.ikon1--kort5{ /*IKONERNA till bilderna */
+ background-image: url("assets/images/cloesupväxt.avif");
+ grid-area: f;
+}
+
+.rad1{
+padding: 0 1 rem;
+display: flex;
+justify-content: space-between;
+}
+
+.rad2{
+padding: 0 1rem;
+margin: 10px 0;
+display: flex;
+justify-content: space-between;
+}
+
+
+.button02{
+display: block;
+background-color: rgb(160, 11, 85);
+text-align: center;
+color: white;
+padding: 1rem;
+align-self: center;
+cursor: pointer;
+border-radius: 15px;
+box-shadow: 0 4px 7px #bdbaba;
+@media only screen and(max-width: 480px) {
+        display: none;
+}
+}
+.fa-trash-o{ /*Går ej att få bort soptunnan och går ej att få bort ta bort knappen när sidan är på mobile-mode  */
+    width: 25px;
+    height: 25px;
+    transform: none;
+    @media only screen and (min-width: 480px) {
+    display: none;
+}
+}
+
+
+
+/*Våra tidigare odlingar börjar här */
+
+.container0 {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-width: 600px){
+        flex-direction: row-reverse;
+        padding: 3rem;
+    }
+ }
+
+ .tips_planta0{ 
+    margin: 1rem 0;
+    width: 240px;
+    height: 240px;
+    border: none;
+    position: relative;
+    border-radius: 239px;
+    background-color: rgba(10,132,110,1);
+    @media only screen and (min-width: 600px){
+        width: 340px;
+        height: 340px;
+        margin: 0 .5rem;
+        
+    }
+        img {
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        position: absolute;
+        text-align: center;
+        width: 50%;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+
+ .column0 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (min-width: 600px){
+        padding: 0 2 rem;
+        flex: 0 0 55%;
+        align-items: baseline; 
+    }
+ }
+
+ /*Detta är Planterade plantor knappen */
+ .button1-vanster {
+    @media only screen and (min-width: 600px){
+        margin: 1rem auto 0px 0px;
+        
+    }
+ }
+
+ /*Detta är "visa fler" knappen */ 
+
+.button0-right{
+    @media only screen and (min-width: 600px){
+        margin: 1rem auto 0px 0px;
+    }
+}
+
+/*Här är Planterade plantor knappen */ 
+.button{
+    @media only screen and(min-width:600px) {
+        margin: 1rem 0 0 auto;
+    }
+
+}
+
+.Knapp{
+    text-align: center;
+
+}
+.CentreraKnapp, .button-vanster, .button0-right{ /*Här är styling på nästan alla knappar. */
+    display: inline-block;
+    background-color: rgba(10, 132, 110, 1);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 7px #383838;
+    max-width: max-content;
+    font-style: normal;
+    font-size: large;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600px;
+    @media only screen and(min-width: 600px) {
+        margin: 1rem auto 0px 0px;
+    }
+}
+
+.enlogo--bild{
+top: 40%;
+left: 50%;
+position: absolute;
+transform: translate(-50%, -50%);
+}
+
+ .container0{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    @media only screen and  (min-width: 600px){
+        flex-direction: row-reverse;
+        padding: 3 rem;
+    }
+
+ }
+
+ .button-vanster{
+    @media only screen and (min-width: 600px){
+
+        margin: 1rem auto 0px 0px;
+    }
+}
+
+/*styling på slutet av sidan*/
+
+.kontaktuppgift{
+    padding: 0 5rem;
+}
+
+ .inform_1 { 
+    position: relative;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("assets/images/handsidan.avif");
+    background-repeat: no-repeat;
+    @media only screen and (min-width: 600px) {
+        height: 500px;
+    
+    }
+ }
+
+ .logoinformation101 {
+    top:0%;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 50%;
+    @media only screen and (min-width: 600px){
+    width: 100%;
+    height: 50%;
+    top: 0%;
+    left: 50%;
+        
+    }
+}
+
+.ikon0ikon0Stor-center{ /*Hjärta ikonen*/
+height: 70%;
+}
+
+.meddelande {
+    background: rgb(0, 0, 0,);
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    color: #f1f1f1;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 0%;
+    padding: 1rem;
+    align-content: end;
+    @media only screen and (min-width: 600px){
+        top: 0%;
+        height: 100%;
+        width: 50%;
+    }
+}
+
+.message { /*Vi hörs texten */
+    top: 20%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    color: #070707;
+    
+}
+
+.infoinneholl0 { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    bottom: 5%;
+ }
+
+ .inform1{ 
+    display: inline-flex;
+    height: 100%;
+    
+}
+
+ .infoinneholl1{
+    display: inline-flex;
+    font-family: Open Sans;
+    color: white;
+    text-decoration: none;
+ }
+
+ .kontaktuppgift{
+    padding: 1rem;
+    text-decoration: rgb(241, 206, 206);
+ }
+
+.returlänk{
+    text-align: center;
+    width: 100%;
+}
+
+
+.returlänkmove{
+    display: inline-flex;
+    font: bold 20px Open Sans;
+    color: black;
+    padding: 1rem 0;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.retur-länkmove{
+    width: 24px; margin-left: .5rem;
+
+}
+
+
+
+/*Styling för Sida2 */
+
+
+/*h1 { Detta rubriken PLANNED PLANTHOOD 
+    text-align: center;
+    letter-spacing: .1em;
+    color: rgb(13, 112, 129);
+}*/
+
+.MittFormulär{
+padding: 2rem;
+}
+
+
+
+
+.formulärKnapp{
+    display: inline-block;
+    background-color: rgba(10, 132, 110, 1);
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px #424040;
+    max-width: max-content;
+    font-style: normal;
+    font-size: large;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600px;
+    @media only screen and(min-width: 600px) {
+        margin: 1rem auto 0px 0px;
+    }
+
+}
+
+.envaxt-sida2{
+        display: grid;
+        padding: 1rem;
+        gap: 1rem;
+        margin-top: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+    @media only screen and (min-width: 600px){
+          
+        }
+    }
+
+    .Gallery {
+        display: grid;
+        background-color: #e2a66e;
+        width: 100%;
+        padding: 1px;
+        gap: 1px;
+        margin-top: 1rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,120px);
+        grid-template-areas: "z å" 
+        "ä ö";
+        @media only screen and (min-width: 600px) {
+            gap: 1rem;
+            grid-template-columns: repeat(4,2fr);
+            grid-template-rows: repeat(1, 400px);
+            grid-template-areas: "z å ä ö";
+        }
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+
+
+        }
+
+    }
+
+    .box1{
+        grid-area: z;
+        
+    }
+
+    .box2{
+        grid-area: å;
+        
+    }
+
+    .box3{
+        grid-area: ä;
+    
+    }
+
+    .box4{
+        grid-area: ö;
+    
+    }
